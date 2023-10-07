@@ -1,0 +1,11 @@
+fun main x =
+let
+  val y = let val x = 3 in (let val x = 4 in x end) + x end
+  val _ = printInt(y)
+in
+  ()
+end ;
+
+
+val _ = main() ;
+

@@ -1,0 +1,11 @@
+fun main x =
+let
+  val _ = printInt(3)
+  val _ = printReal(1.5)
+  val _ = printBool(true)
+in
+  ()
+end ;
+
+main() ;
+

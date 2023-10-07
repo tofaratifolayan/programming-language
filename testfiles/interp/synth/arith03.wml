@@ -1,0 +1,12 @@
+fun main x =
+let
+  val _ = printInt(~1)
+  val _ = printReal(~2.0)
+in
+  ()
+end ;
+
+
+
+val _ = main() ; 
+

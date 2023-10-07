@@ -1,0 +1,15 @@
+(*  x^17, not x^100 as in the actual example, since this types to int -> int.
+*   
+*   No semicolons after any local declarations.
+*)
+fun seventeenthPower x =
+let
+  val four = x*x*x*x
+  val seventeen = four*four
+in
+  seventeen*x
+end ;
+
+seventeenthPower 2 ;
+seventeenthPower 3 ;
+

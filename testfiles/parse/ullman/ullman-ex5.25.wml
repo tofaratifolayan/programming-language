@@ -1,0 +1,32 @@
+fun simpleMap F ys =
+  if null ys then nil
+  else 
+    let
+      val x = hd ys
+      val xs = tl ys
+    in
+      F(x) :: simpleMap F xs
+    end ;
+
+fun reduce F b ys =
+  if null ys then b
+  else 
+    let
+      val x = hd ys
+      val xs = tl ys
+    in
+      F x (reduce F b xs)
+    end ;
+
+fun variance L =
+let
+  val square = fn x => 1.0 *# x *# x
+  val plus = fn x => fn y => x +# y
+
+  val n = real(length L)
+in
+  (reduce plus 0.0 (simpleMap square L)) /# n -# 
+    square((reduce plus 0.0 L)/#n)
+end ;
+
+variance [1.0, 2.0, 5.0, 8.0] ;

@@ -1,0 +1,7 @@
+fun main x =
+let
+  val _ = printReal(if true andalso true then 3.5 else 7.9) ;
+in
+  ()
+end ;
+

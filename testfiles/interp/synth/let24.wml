@@ -1,0 +1,22 @@
+fun main x =
+let
+  val _ = printBool(
+    let 
+      val x = true 
+    in 
+      x andalso
+      let 
+        val x = 4 
+      in 
+        x + 2 
+      end
+      =
+      4
+    end
+  ) ;
+in
+  ()
+end ;
+
+val _ = main() ;
+

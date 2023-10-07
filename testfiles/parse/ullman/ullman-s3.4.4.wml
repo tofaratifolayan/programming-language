@@ -1,0 +1,42 @@
+fun split xs =
+  if xs = nil then (nil, nil)
+  else if tl xs = nil then ([hd xs], nil)
+  else
+    let 
+      val yszs = split (tl (tl xs))
+      val ys = #1(yszs)
+      val zs = #2(yszs)
+    in
+      (hd xs :: ys, hd (tl xs) :: zs)
+    end ;
+
+split [1, 2, 3, 4, 5] ;
+
+fun merge xs ys =
+  if xs = nil then ys
+  else if ys = nil then xs
+  else
+    let
+      val x = hd xs
+      val xs' = tl xs
+      val y = hd ys
+      val ys' = tl ys
+    in
+      if x < y then x :: merge xs' ys else y :: merge xs ys'
+    end ;
+
+fun mergeSort xs =
+  if xs = nil then nil
+  else if tl xs = nil then [hd xs]
+  else 
+    let
+      val yszs = split xs
+      val ys = mergeSort (#1yszs)
+      val zs = mergeSort (#2yszs)
+    in
+      merge ys zs
+    end ;
+
+mergeSort [1, 3, 5, 7, 9, 2, 4, 6, 8, 0] ;
+mergeSort [9, 8, 7, 6, 5, 4, 3, 2, 1] ;
+

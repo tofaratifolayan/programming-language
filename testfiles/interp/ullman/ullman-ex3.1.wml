@@ -1,0 +1,2 @@
+fun upper c = chr(ord(c)-32) ;
+upper(#"a") ;

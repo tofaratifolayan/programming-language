@@ -1,0 +1,13 @@
+fun main x =
+let
+  val _ = printBool(1 = 1) ;
+  val _ = printBool(2 <> 37) ;
+  val _ = printBool(true = true) ;
+  val _ = printBool(true <> true) ;
+  val _ = printBool(false = true) ;
+  val _ = printBool(false = false) ;
+in
+  ()
+end ;
+
+val _ = main() ;

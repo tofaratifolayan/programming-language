@@ -1,0 +1,10 @@
+fun main x =
+let
+  val _ = printInt(1 + 2 * 3 - 4 + 5) ;
+  val _ = printReal(1.0 +# 7.0 /# 2.0 *# 3.0 -# 2.0) ;
+in
+  ()
+end ;
+
+main() ;
+

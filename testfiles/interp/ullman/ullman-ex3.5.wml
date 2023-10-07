@@ -1,0 +1,5 @@
+fun square x = x*x ;
+val x = 3 ;
+val y = 4 ;
+square x+y ;
+square(x+y) ;

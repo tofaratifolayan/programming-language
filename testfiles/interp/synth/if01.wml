@@ -1,0 +1,8 @@
+fun main x =
+let
+  val _ = printInt(if true then 1 else 2) ;
+in
+  ()
+end ;
+
+val _ = main() ;

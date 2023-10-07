@@ -1,0 +1,9 @@
+fun main x =
+let
+  val _ = printBool(not true)
+  val _ = printBool(not false)
+in
+  ()
+end ;
+
+val _ = main() ;

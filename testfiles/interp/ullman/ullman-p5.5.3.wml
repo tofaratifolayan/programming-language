@@ -1,0 +1,25 @@
+fun map f ys =
+  if null ys then nil
+  else
+    let
+      val x = hd ys
+      val xs = tl ys
+    in
+      f x :: map f xs
+    end ;
+
+fun initsublist xs ys =
+  if null xs then true
+  else if null ys then false
+  else hd xs = hd ys andalso initsublist (tl xs) (tl ys) ;
+
+fun sublist xs ys =
+  if null ys then false
+  else initsublist xs ys orelse sublist xs (tl ys) ;
+
+fun sublistfns xss = map sublist xss ;
+
+val hersheyFns = sublistfns [explode "he", explode "her", explode "she", explode
+  "his"] ;
+
+map (fn f => f (explode "hershey")) hersheyFns ;

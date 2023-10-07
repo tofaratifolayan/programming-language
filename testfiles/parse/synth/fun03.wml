@@ -1,0 +1,10 @@
+fun f x y = x - y + 0 ;
+
+fun main x =
+let
+  val _ = printInt(f 3 2)
+in
+  ()
+end ;
+
+val _ = main() ;

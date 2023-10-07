@@ -1,0 +1,16 @@
+fun abs x =
+  if x <# 0.0 then ~1.0*#x
+  else x ;
+
+fun findroot a x acc =
+let
+  val nextx = (a/#x +# x)/#2.0
+in
+  if abs(x -# nextx) <# acc*#x then nextx
+  else findroot a nextx acc
+end ;
+
+fun sqroot x = findroot x 1.0 0.01 ;
+
+val _ = printReal(sqroot 2.0) ;
+

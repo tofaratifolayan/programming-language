@@ -1,0 +1,19 @@
+fun main x =
+let
+  val _ = printInt(
+    let 
+      val x = true 
+    in 
+      let 
+        val x = 4 
+      in 
+        x + 2 
+      end
+    end
+  ) ;
+in
+  ()
+end ;
+
+val _ = main() ;
+

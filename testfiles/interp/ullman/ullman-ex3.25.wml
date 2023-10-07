@@ -1,0 +1,13 @@
+(* 
+*)
+fun hundredthPower x =
+let
+  val four = x *# x *# x *# x ;
+  val twenty = four *# four *# four *# four
+in
+  twenty *# twenty *# twenty *# twenty *# twenty
+end ;
+
+hundredthPower 2.0 ;
+hundredthPower 3.0 ;
+

@@ -1,0 +1,10 @@
+Library
+  structure UnitTest
+  structure TestRunner
+is
+  unittest.sml
+
+  $/basis.cm
+  $/smlnj-lib.cm
+  $smlnj/compiler.cm
+  $smlnj-tdp/plugins.cm

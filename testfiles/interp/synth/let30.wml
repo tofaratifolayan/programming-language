@@ -1,0 +1,17 @@
+fun main x =
+let
+  val _ = printInt(
+       let
+         val x = 3
+         val y = 7
+       in
+         x + y
+       end
+     ) ;
+in
+  ()
+end ;
+
+
+val _ = main() ;
+

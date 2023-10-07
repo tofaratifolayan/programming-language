@@ -1,0 +1,12 @@
+fun f x = x andalso true ;
+
+fun g x y = f x andalso y ;
+
+fun main x =
+let
+  val _ = printBool(g true false)
+in
+  ()
+end ;
+
+val _ = main() ;

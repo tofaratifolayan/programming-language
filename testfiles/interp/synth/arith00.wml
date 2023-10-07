@@ -1,0 +1,13 @@
+fun main x =
+let
+  val _ = printInt(1 + 2) ;
+  val _ = printInt(1 - 2) ;
+  val _ = printInt(1*2) ;
+  val _ = printInt(1 / 2) ;
+  val _ = printInt(1 % 2) ;
+in
+  ()
+end ;
+
+main() ;
+
